@@ -1,0 +1,45 @@
+# Rust build output
+/target/
+
+# Runtime data: never commit user uploads, cache, or databases.
+/data/
+/data/originals/
+/data/cache/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+
+# Logs and local process output
+*.log
+*.out.log
+*.err.log
+picbad.log
+picbad.out.log
+picbad.err.log
+
+# Local test media generated during development
+sample.png
+valid-sample.png
+api-key-sample.png
+same-user-isolation.png
+big-invalid.png
+tiny.mp4
+player-test.mp4
+
+# Screenshots generated during UI checks
+admin-ui*.png
+admin-overlap*.png
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

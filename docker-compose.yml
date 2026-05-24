@@ -1,0 +1,16 @@
+services:
+  picbad:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      PICBAD_BIND: 0.0.0.0:8080
+      PICBAD_DATA_DIR: /app/data
+      PICBAD_DATABASE_URL: sqlite:///app/data/picbad.sqlite
+      PICBAD_ADMIN_USER: admin
+      PICBAD_ADMIN_PASSWORD: PicbadAdmin123!
+    volumes:
+      - picbad-data:/app/data
+
+volumes:
+  picbad-data:
